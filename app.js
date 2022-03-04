@@ -1,9 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generatePage = require('./src/table-template');
 const generateMarkdown = require('./utils/generateMarkdown');
-const { title } = require('process');
 
 //  
 
@@ -57,7 +55,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', JSON.stringify(fileName, data), err => {
+        fs.writeFile('./dist/README.md', fileName, data, err => {
             if (err) {
                 reject(err);
                 return;
