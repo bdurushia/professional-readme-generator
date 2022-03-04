@@ -49,7 +49,49 @@ const questions = [
         type: 'input',
         name: 'usage',
         message: 'Please add any further instructions and examples for use. To add a screenshot, please copy the image into the assets/images folder.'
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'List any collaborators on the project and links to their GitHub profiles if any:'
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'If any third-party assets were used that require crediting, list them with the links to their web presence here:'
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'Please provide links to tutorials if you followed any:'
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What license is used by your project?',
+        choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+        validate: licenseInput = () => {
+            if (licenseInput) {
+            return true;
+            } else {
+                console.log('Please select one of the five options.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmFeatures',
+        message: 'Are there any feature you would like to list?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'features',
+        message: 'If your project has a lot of features, list them here:',
+        when: ({ confirmFeatures }) => confirmFeatures
     }
+
 ];
 
 // TODO: Create a function to write README file
