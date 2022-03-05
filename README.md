@@ -5,7 +5,7 @@
  This application is covered under the MIT License. [Click here to read more.](https://choosealicense.com/licenses/mit/)
 
   ## Description
-  A node application that makes it fast and easy to build a professional README.md file.
+  A Node.js application that makes it fast and easy to build a professional README.md file.
 
   ## Table of Contents:
   - [Installation](#installation)
