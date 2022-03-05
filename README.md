@@ -40,8 +40,6 @@
 
   - Technologies used: [Node.js](https://nodejs.org/en/about/), [Node Package Manager](https://docs.npmjs.com/about-npm), [NPM Inquirer Package](https://www.npmjs.com/package/inquirer).
 
-  - [https://www.youtube.com/watch?v=1AxFrY2oSiw](https://www.youtube.com/watch?v=1AxFrY2oSiw)
-
   ---
 
   ## Questions
