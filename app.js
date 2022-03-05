@@ -174,7 +174,7 @@ function writeToFile(fileName, data) {
             
             resolve({
                 ok: true,
-                message: 'README.md file Created!'
+                message: 'README.md file Created! It is located in the /dist folder.'
             });
         });
     });
