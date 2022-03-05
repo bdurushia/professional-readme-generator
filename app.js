@@ -10,7 +10,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title name of your project? (Required):\n',
+        message: 'TITLE: What is the title name of your project? (Required):\n',
         validate: titleInput => {
             if (titleInput) {
                 return true;
@@ -23,7 +23,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Briefly describe the what, why, and how of your project. (Required):\n',
+        message: 'DESCRIPTION: Briefly describe the what, why, and how of your project. (Required):\n',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -36,7 +36,7 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        message: 'What license is used by your project? (Required):\n',
+        message: 'LICENSE: What license is used by your project? (Required):\n',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
         validate: licenseInput => {
             if (licenseInput) {
@@ -50,7 +50,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Provide a step-by-step guide on how to get the application installed and running.\nBe sure to use back-ticks for lines of code or terminal commands:\n',
+        message: 'INSTALLATION: Provide a step-by-step guide on how to get the application installed and running.\nBe sure to use back-ticks for lines of code or terminal commands:\n',
         validate: installationInput => {
             if (installationInput) {
                 return true;
@@ -63,27 +63,32 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Please add any examples for how to use this application:\n'
+        message: 'USAGE: Please add any examples for how to use this application:\n'
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'If you would like, you can write tests for your application. \n Then provide examples here:'
+        message: 'TESTS: If you would like, you can write tests for your application. \n Then provide examples here:'
+    },
+    {
+        type: 'input',
+        name: 'contribute',
+        message: 'CONTRIBUTION: Describe how someone can contribute to this project:\n'
     },
     {
         type: 'list-input',
         name: 'credits',
-        message: 'List any collaborators on the project and/or list yourself:\n'
+        message: 'CREDIT COLLABORATORS: List any collaborators on the project and/or list yourself:\n'
     },
     {
         type: 'list-input',
         name: 'thirdParties',
-        message: 'List any third-party assets used that require credit:\n',
+        message: 'CREDIT THIRD PARTIES: List any third-party assets used that require credit:\n',
     },
     {
         type: 'input',
         name: 'tutorials',
-        message: '(If none were used, leave blank.) \n Please provide links to tutorials if you followed any:\n',
+        message: 'CREDIT TUTORIALS: (If none were used, leave blank.) \n Please provide links to tutorials if you followed any:\n',
         filter: function(tutorialsInput) {
             if (!tutorialsInput) {
                 return '';
@@ -94,13 +99,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contribute',
-        message: 'Describe how someone can contribute to this project:\n'
-    },
-    {
-        type: 'input',
         name: 'userName',
-        message: 'What is your name?',
+        message: 'NAME: What is your name?',
         validate: userNameInput => {
             if (userNameInput) {
                 return true;
@@ -113,7 +113,7 @@ const questions = [
     {
         type: 'input',
         name: 'githubUserName',
-        message: 'Provide your GitHub username:',
+        message: 'USERNAME: Provide your GitHub username:',
         validate: githubUserNameInput => {
             if (githubUserNameInput) {
                 return true;
@@ -126,7 +126,7 @@ const questions = [
     {
         type: 'input',
         name: 'userEmail',
-        message: 'Provide your email address:',
+        message: 'EMAIL: Provide your email address:',
         validate: userEmailInput => {
             if (userEmailInput) {
                 return true;
@@ -139,7 +139,7 @@ const questions = [
     {
         type: 'input',
         name: 'githubRepo',
-        message: 'Provide a link to your Github Repository for this application:',
+        message: 'REPO: Provide a link to your Github Repository for this application:',
         validate: githubRepoInput => {
             if (githubRepoInput) {
                 return true;
@@ -148,6 +148,18 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmScreenshot',
+        message: 'SCREENSHOT: Would you like to add a screenshot of your application?',
+        default: false
+    },
+    {
+        type: 'input',
+        name: 'screenshot',
+        message: 'INSERT: Paste the link to your screenshot into the terminal.\nOr you may add it to the assets/images folder, then copy the relative filepath and paste it here:',
+        when: ({ confirmScreenshot }) => confirmScreenshot
     }
 ];
 

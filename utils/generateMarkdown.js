@@ -1,11 +1,21 @@
-const renderTableInstallation = (confirmInstallation) => {
-
-  if (!confirmInstallation) {
-      return '';
+function renderImage(screenshot){
+  let image = '';
+  if (screenshot) {
+    image = '![image](' + screenshot + ')';
   } else {
-      return `- [Installation](#installation)`;
+    image = '';
   }
-};
+  return image;
+}
+
+function renderScreenshot(confirmScreenshot, screenshot){
+  if (!confirmScreenshot) {
+    return '';
+  } else {
+    return `${renderImage(screenshot)}`
+  }
+
+}
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -63,15 +73,15 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents:
-  ${renderTableInstallation(data.confirmInstallation)}
+  - [Installation](#installation)
   - [License](#license)
   - [Usage](#usage)
   - [Credits](#credits)
-  - [Contributing](#contribute)
+  - [Contributing](#contribution)
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## Installation:
+  ## Installation
   ${data.installation}
 
   ## Usage
@@ -90,7 +100,7 @@ function generateMarkdown(data) {
 
   - Technologies used: ${data.thirdParties}
 
-  [${data.tutorials}](${data.tutorials})
+  - [${data.tutorials}](${data.tutorials})
 
   ---
 
@@ -99,6 +109,10 @@ function generateMarkdown(data) {
   * Email: [${data.userEmail}](mailto:${data.userEmail})\n
   * GitHub: [${data.githubUserName}](https://github.com/${data.githubUserName})\n
   * GitHub Repository: [${data.title} Repo Link](${data.githubRepo})
+  
+  ---
+
+  ${renderScreenshot(data.confirmScreenshot, data.screenshot)}
   `;
 }
 

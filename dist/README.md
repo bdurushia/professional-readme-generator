@@ -1,4 +1,4 @@
-# README Generator
+# Professional README.md Generator
   ## License
   ![License](https://img.shields.io/badge/license-MIT-green) 
 
@@ -8,15 +8,15 @@
   A node application that makes it fast and easy to build a professional README.md file.
 
   ## Table of Contents:
-  
+  - [Installation](#installation)
   - [License](#license)
   - [Usage](#usage)
   - [Credits](#credits)
-  - [Contributing](#contribute)
+  - [Contributing](#contribution)
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## Installation:
+  ## Installation
   Once you clone the repo, in your terminal, run the commands `npm install` and then run the command `node app` to start the application.
 
   ## Usage
@@ -25,17 +25,17 @@
   ---
 
   ## Contribution
-  Please send me an email and a request to contribute to this project on GitHub.
+  Please send me an email and a request to contribute to this projects on github.
 
   ## Tests
-  No tests written for this application.
+  No tests written.
 
   ## Credits
   - Built by: Bryan Durushia
 
-  - Technologies used: Node.js, Node Package Manager, Inquirer
+  - Technologies used: Node.js, Node Package Manager.
 
-  []()
+  - [https://www.youtube.com/watch?v=1AxFrY2oSiw](https://www.youtube.com/watch?v=1AxFrY2oSiw)
 
   ---
 
@@ -46,5 +46,9 @@
 
   * GitHub: [bdurushia](https://github.com/bdurushia)
 
-  * GitHub Repository: [README Generator Repo Link](https://github.com/bdurushia/profressional-readme-generator)
+  * GitHub Repository: [Professional README.md Generator Repo Link](https://github.com/bdurushia/professional-readme-generator)
+  
+  ---
+
+  ![image](/assets/images/screenshot-gif.gif)
   
